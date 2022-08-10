@@ -174,7 +174,9 @@ def pyverilate_stitched_ip(
         return os.path.basename(os.path.realpath(x))
 
     top_module_file_name = file_to_basename(model.get_metadata_prop("wrapper_filename"))
+    print(top_module_file_name)
     top_module_name = top_module_file_name.strip(".v")
+    print(top_module_name)
     build_dir = make_build_dir("pyverilator_ipstitched_")
 
     # dump all Verilog code to a single file
